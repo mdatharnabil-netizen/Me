@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Imaginerty — Turn your imagination into cinematic AI videos."
+    >
+
+    <title>Imaginerty — AI Video Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="container">
+
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                Imaginerty
+            </div>
+
+            <div class="nav-badge">
+                AI VIDEO
+            </div>
+        </nav>
+
+        <section class="hero">
+
+            <div class="eyebrow">
+                <span></span>
+                TEXT TO VIDEO
+            </div>
+
+            <h1>
+                Turn your imagination
+                <br>
+                <em>into motion.</em>
+            </h1>
+
+            <p>
+                Describe anything you can imagine and create a cinematic
+                AI-generated video.
+            </p>
+
+        </section>
+
+
+        <section class="generator-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Create a video</h2>
+                    <p>Describe the scene you want to generate.</p>
+                </div>
+
+                <div class="ai-status">
+                    <span></span>
+                    AI READY
+                </div>
+            </div>
+
+
+            <label for="prompt">
+                YOUR PROMPT
+            </label>
+
+            <textarea
+                id="prompt"
+                maxlength="1200"
+                placeholder="A cinematic drone shot flying over a futuristic city at sunset, neon lights reflecting on wet streets..."
+            ></textarea>
+
+            <div class="prompt-footer">
+                <span id="characterCount">0 / 1200</span>
+
+                <button
+                    type="button"
+                    id="exampleButton"
+                    class="example-button"
+                >
+                    Try example
+                </button>
+            </div>
+
+
+            <div class="controls">
+
+                <div class="control-group">
+
+                    <label for="aspect">
+                        ASPECT RATIO
+                    </label>
+
+                    <select id="aspect">
+                        <option value="16:9">
+                            16:9 — Landscape
+                        </option>
+
+                        <option value="9:16">
+                            9:16 — Portrait
+                        </option>
+
+                        <option value="1:1">
+                            1:1 — Square
+                        </option>
+                    </select>
+
+                </div>
+
+
+                <button
+                    id="generate"
+                    class="generate-button"
+                    type="button"
+                >
+                    <span id="buttonText">
+                        Generate Video
+                    </span>
+
+                    <span class="button-icon">
+                        ✦
+                    </span>
+                </button>
+
+            </div>
+
+
+            <div
+                id="statusBox"
+                class="status-box"
+                hidden
+            >
+                <div class="loader"></div>
+
+                <div>
+                    <strong id="statusTitle">
+                        Generating your video...
+                    </strong>
+
+                    <p id="statusText">
+                        The AI is creating your scene. This may take a few minutes.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section
+            id="resultSection"
+            class="result-card"
+            hidden
+        >
+
+            <div class="result-header">
+
+                <div>
+                    <div class="eyebrow small">
+                        GENERATED VIDEO
+                    </div>
+
+                    <h2>Your creation</h2>
+                </div>
+
+                <a
+                    id="downloadButton"
+                    class="download-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Open / Download ↗
+                </a>
+
+            </div>
+
+
+            <div class="video-wrapper">
+
+                <video
+                    id="video"
+                    controls
+                    playsinline
+                ></video>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span>✦</span>
+            Imaginerty
+            <span class="footer-dot">•</span>
+            AI Video Generator
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
