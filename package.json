@@ -1,0 +1,9 @@
+{
+  "name": "imaginerty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Imaginerty AI video generator",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
