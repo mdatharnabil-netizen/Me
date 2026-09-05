@@ -5,5 +5,8 @@
   "description": "Imaginerty AI video generator",
   "scripts": {
     "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
   }
 }
